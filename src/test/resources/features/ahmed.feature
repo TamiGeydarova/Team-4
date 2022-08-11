@@ -1,4 +1,4 @@
-@team4
+@Team4
 Feature: Team 4
 
   @test7.4.2
