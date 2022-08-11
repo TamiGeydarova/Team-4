@@ -35,7 +35,7 @@ public class SearchVKSteps extends GeneralSteps {
     }
 
     @Then("^Search query matches the: \"(.*)\" _VK$")
-    public void checkSearchQueryMArchesTheValue(String value) {
+    public void checkSearchQueryMatchesTheValue(String value) {
        String searchQuery = driver.findElement(By.cssSelector("#content h1")).getText();
        String expectedValue = "Search - " + value;
        assertEquals(expectedValue, searchQuery);
