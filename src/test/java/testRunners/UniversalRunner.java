@@ -7,11 +7,13 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         // Here some tags can be set, for example, tags = {"@Example", "~@ignore"},
-        tags = {"@INSERT_TAG_HERE"},
+        //tags = {"@INSERT_TAG_HERE"},
+        tags = {"@test8.2.4"},
         plugin = {"html:target/cucumber", "json:target/cucumber.json"},
         features = {"src/test/resources/features/"},
         glue = {"stepDefinitions"}
 )
 
 public class UniversalRunner {
+
 }
