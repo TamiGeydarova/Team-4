@@ -112,7 +112,6 @@ Feature: Team 4
         |Myname|  iphone|
 
   @test8.2.5
-
   Scenario Outline: this scenario will check review without choose rate
     Given open Home page
     Then search box in home page to write item
@@ -126,7 +125,7 @@ Feature: Team 4
     And write review in text box
       |text|<text> |
     Then click continue button
-    Then user can see error message for rating
+    Then user can see error message for review ratting
     Examples:
       |     name  |              text                   |item|
       |Myname|goodtestmakegoodproductandgoodquality|iphone|

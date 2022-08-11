@@ -182,9 +182,9 @@ assertNotEquals("please fill all fields",driver.findElement(By.cssSelector("#for
     public void  erroressageforreviewtext() {
         assertEquals("Warning: Review Text must be between 25 and 1000 characters!",texwarning.wartext());
     }
-    @When("^user can see error message for rating$")
+    @When("^user can see error message for review ratting$")
     public void  eerrormessageforrating() {
-        assertEquals("Warning:Please select a review rating!",errorrating.warningerorr());
+        assertEquals("Warning: Please select a review rating!",errorrating.warningerorr());
     }
 
 }
