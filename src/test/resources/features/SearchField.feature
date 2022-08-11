@@ -1,4 +1,4 @@
-@team4
+@Team4
 Feature: Testing searchfield by KR
 
   Scenario Outline: Search in product descriptions

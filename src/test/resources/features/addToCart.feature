@@ -1,4 +1,4 @@
-@team4
+@Team4
 
 Feature: Testing add to cart button by KR
 
