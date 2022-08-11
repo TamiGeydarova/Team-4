@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class AbstractPage extends Page {
+public class AbstractPageVK extends Page {
 
     @FindBy(how = How.CSS, using = "header #search input[name=\"search\"]")
     private WebElement headerSearchField;
@@ -14,7 +14,7 @@ public class AbstractPage extends Page {
     @FindBy(how = How.CSS, using = "header #search button")
     private WebElement headerSearchButton;
 
-    public AbstractPage(WebDriverLib driver) {
+    public AbstractPageVK(WebDriverLib driver) {
         super(driver);
         PageFactory.initElements(driver, this);
     }

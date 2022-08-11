@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         // Here some tags can be set, for example, tags = {"@Example", "~@ignore"},
-        tags = { "@performFromSearchPage" },
+        tags = { "@searchFromHomePage, @searchFromSearchPageValid, @searchFromSearchPageInvalid" },
         plugin = {"html:target/cucumber", "json:target/cucumber.json"},
         features = {"src/test/resources/features/"},
         glue = {"stepDefinitions"}

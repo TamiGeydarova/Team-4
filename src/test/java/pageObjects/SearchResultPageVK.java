@@ -8,7 +8,7 @@ import org.openqa.selenium.support.How;
 import java.util.List;
 
 
-public class SearchResultPage extends AbstractPage {
+public class SearchResultPageVK extends AbstractPageVK {
 
     @FindBy(how = How.CSS, using = "#input-search")
     private WebElement searchField;
@@ -22,7 +22,7 @@ public class SearchResultPage extends AbstractPage {
     @FindBy(how = How.CSS, using = ".product-layout")
     private List<WebElement> searchResultsList;
 
-    public SearchResultPage(WebDriverLib driver) {
+    public SearchResultPageVK(WebDriverLib driver) {
         super(driver);
     }
     public void performSearchFromSearchPage(String searchQuery) {
