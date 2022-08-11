@@ -1,3 +1,4 @@
+@Team4
 Feature: Wishlist tests
 
   @addToWishlistFromSearchResultsAnonymous
