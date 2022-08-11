@@ -1,24 +1,20 @@
-Feature: Google Feature Example
+@sorting
+Feature: Sorting list of products after search
 
-  @INSERT_TAG_HERE
-  Scenario Outline: Search in google
-    Given open Google webpage
-    When search "<SearchingText>"
-    Then result page was opened
-    And first result is: "<SearchingResult>"
+  Scenario Outline: Test sorting list of products
+    Given I am on Testing Demo Shop page
+    When I search "sa"
+    And I click to sort by "<value>"
+    Then I verify That list of products is sorted "<value>"
 
     Examples:
-      | SearchingText      | SearchingResult                            |
-      | Selenium WebDriver | Selenium WebDriver                         |
-      | Cucumber Trainings | Online training - Cucumber School·Cucumber |
+      | value              |
+      | Name (A - Z)       |
+      | Name (Z - A)       |
+      | Price (Low > High) |
+      | Price (High > Low) |
 
-  @INSERT_TAG_HERE
-  Scenario: Login into Google with incorrect user data
-    Given open Google webpage
-    And click login button
-    And type user credentials
-      | username | test1234  |
-      | password | qwerty123 |
-    When click login
-    Then error message: Parole nav pareiza
-
+  Scenario: Test visibility of pagination
+    Given I am on Testing Demo Shop page
+    When I search "0"
+    Then I verify that pagination is visible
