@@ -1,6 +1,7 @@
 package pageObjects;
 
 import flowWorkers.WebDriverLib;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -20,7 +21,7 @@ public class SearchResultPageVK extends AbstractPageVK {
     private List<WebElement> noSearchResultDisplayList;
 
     @FindBy(how = How.CSS, using = ".product-layout")
-    private List<WebElement> searchResultsList;
+    public List<WebElement> searchResultsList;
 
     public SearchResultPageVK(WebDriverLib driver) {
         super(driver);
@@ -34,9 +35,18 @@ public class SearchResultPageVK extends AbstractPageVK {
         return noSearchResultDisplayList.size() > 0;
     }
 
-    public boolean hasSearchResults() {
+    public boolean hasSearchResults()
+    {
         return searchResultsList.size() > 0;
     }
 
-
+    public int getSearchResultsCount() {
+        return searchResultsList.size();
+    }
+    public void addAllResultsToWishList() throws InterruptedException {
+        for (WebElement currentItem: searchResultsList) {
+            currentItem.findElement(By.cssSelector(".button-group button:nth-child(2)")).click();
+            Thread.sleep(1200);
+        }
+    }
 }
