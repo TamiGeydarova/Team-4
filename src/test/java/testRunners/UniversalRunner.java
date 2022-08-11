@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         // Here some tags can be set, for example, tags = {"@Example", "~@ignore"},
         //tags = {"@INSERT_TAG_HERE"},
-        tags = {"@test8.2.4"},
+        tags = {"@test4"},
         plugin = {"html:target/cucumber", "json:target/cucumber.json"},
         features = {"src/test/resources/features/"},
         glue = {"stepDefinitions"}

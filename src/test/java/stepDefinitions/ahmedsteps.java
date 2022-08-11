@@ -39,6 +39,8 @@ public class ahmedsteps extends GeneralSteps {
     private reviewsection reviewpag=new reviewsection(driver);
     private reviewsection texwarning=new reviewsection(driver);
 
+    private reviewsection errorrating=new reviewsection(driver);
+
     @Given("^open Home page$")
     public void iamonpage() {
         driver.get("http://www.demoshop24.com/index.php?route=common/home");
@@ -79,9 +81,9 @@ public class ahmedsteps extends GeneralSteps {
     }
 
     @When("^click search blue button$")
-    public void clicksearchbluebutton() throws InterruptedException {
+    public void clicksearchbluebutton()  {
         homepage.clickOnbluesearnbutton();
-        Thread.sleep(10000);
+
     }
 
     @When("^Ensure i got the item$")
@@ -180,4 +182,9 @@ assertNotEquals("please fill all fields",driver.findElement(By.cssSelector("#for
     public void  erroressageforreviewtext() {
         assertEquals("Warning: Review Text must be between 25 and 1000 characters!",texwarning.wartext());
     }
+    @When("^user can see error message for rating$")
+    public void  eerrormessageforrating() {
+        assertEquals("Warning:Please select a review rating!",errorrating.warningerorr());
+    }
+
 }

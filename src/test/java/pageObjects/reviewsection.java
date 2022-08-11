@@ -31,6 +31,8 @@ public class reviewsection extends Page {
 
     @FindBy(xpath= "//*[contains(text(),'Warning: Review Text')]")
     public WebElement textwarn;
+    @FindBy(xpath= "//*[contains(text(),'review rating')]")
+    public WebElement bratting;
     public reviewsection(WebDriverLib driver) {
         super(driver);
         PageFactory.initElements(driver,this);
@@ -72,6 +74,9 @@ public class reviewsection extends Page {
     }
     public String wartext(){
         return  textwarn.getText();
+    }
+    public String warningerorr(){
+        return  bratting.getText();
     }
 
 
