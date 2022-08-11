@@ -1,4 +1,4 @@
-@compare
+@Team4
 Feature: Compare button
 
   Scenario: Test if compare button adds products to the compare list

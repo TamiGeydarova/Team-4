@@ -1,4 +1,4 @@
-@sorting
+@Team4
 Feature: Sorting list of products after search
 
   Scenario Outline: Test sorting list of products
