@@ -45,8 +45,8 @@ public class WebDriverLib implements WebDriver {
                 break;
         }
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        wait = new WebDriverWait(driver, 20);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver, 5);
     }
 
     public void openWebPage(String URL) {
